@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090909" />
+  <title>Liquid Lab — Call of Duty Services</title>
+  <meta name="description" content="Premium Call of Duty services, accounts, stats and lobby packages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="top-glow"></div>
+
+  <header class="nav-shell">
+    <nav class="nav container">
+      <a class="brand" href="https://discord.gg/liquidlab" target="_blank" rel="noreferrer">
+        <img src="logo.png" alt="LiquidLab Logo" class="brand-mark-img">
+        <span>LiquidLab<span class="brand-dot"></span></span>
+      </a>
+
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Search" id="searchButton">
+          <svg viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
+        </button>
+        <a class="discord-btn" href="https://discord.gg/liquidlab" target="_blank" rel="noreferrer">
+          <span class="status-dot"></span> Join Discord
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> PREMIUM COD SERVICES</div>
+        <h1>Upgrade your game.<br><span>Skip the grind.</span></h1>
+        <p>
+          Fast, reliable Call of Duty services with straightforward pricing,
+          secure ordering, and support when you need it.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-btn" href="#services">Browse Services
+            <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <a class="secondary-btn" href="#reviews">Why choose us?</a>
+        </div>
+
+        <div class="trust-row">
+          <div><strong>5/5</strong><span>Customer rating</span></div>
+          <div><strong>100+</strong><span>Orders completed</span></div>
+          <div><strong>&lt;5-10 min</strong><span>Average response</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hud-card main-hud">
+          <div class="hud-top">
+            <div>
+              <span class="mini-label">SERVICE STATUS</span>
+              <strong><i></i> ONLINE</strong>
+            </div>
+            <span class="hud-code">#VX-07</span>
+          </div>
+
+          <div class="soldier-art">
+            <img class="banner-img" src="banner.png" alt="Liquid Lab game services banner">
+            <div class="coords">34.0522° N / 118.2437° W</div>
+          </div>
+
+          <div class="hud-bottom">
+            <div><span>QUEUE</span><strong>00</strong></div>
+            <div><span>SUCCESS RATE</span><strong>100%</strong></div>
+            <div><span>SUPPORT</span><strong>ACTIVE</strong></div>
+          </div>
+        </div>
+
+        <div class="floating-card fc-one">
+          <span class="fc-icon">✓</span>
+          <div><strong>Order complete</strong><small>Delivered successfully</small></div>
+        </div>
+        <div class="floating-card fc-two">
+          <span class="fc-icon lightning">↯</span>
+          <div><strong>Instant delivery</strong><small>Selected products</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span><i>◆</i>LIQUID DIVINIUM</span>
+        <span><i>◆</i>CRYPTO KEYS</span>
+        <span><i>◆</i>STAT PACKAGES</span>
+        <span><i>◆</i>UNLOCK SERVICES</span>
+        <span><i>◆</i>FAST SUPPORT</span>
+        <span><i>◆</i>MODDED ACCOUNTS</span>
+        <span><i>◆</i>SECURE CHECKOUT</span>
+        <span><i>◆</i>BOT LOBBIES</span>
+        <span><i>◆</i>LIQUID DIVINIUM</span>
+        <span><i>◆</i>CRYPTO KEYS</span>
+        <span><i>◆</i>STAT PACKAGES</span>
+      </div>
+    </section>
+
+    <section class="section container" id="services">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> SHOP SERVICES</div>
+          <h2>Choose your <em>service</em></h2>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="accounts">Accounts</button>
+          <button class="filter" data-filter="bo3">BO3</button>
+          <button class="filter" data-filter="bo4">BO4</button>
+          <button class="filter" data-filter="cw">Cold War</button>
+          <button class="filter" data-filter="bots">Bot Lobbies</button>
+          <button class="filter" data-filter="psn">PSN Services</button>
+        </div>
+      </div>
+
+      <div class="subfilters" id="subfilters"></div>
+
+      <div class="products" id="productGrid">
+        <article class="product-card featured" data-category="accounts">
+          <div class="badge popular">MOST POPULAR</div>
+          <div class="product-image">
+            <img src="products/premium-modded-account.jpg" alt="Premium Modded Account" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">A</div>
+          </div>
+          <div class="product-meta"><span>ACCOUNT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Premium Modded Account</h3>
+          <p>Pre-configured account package with selectable progression options and account details delivered after purchase.</p>
+          <ul>
+            <li>Multiple platform options</li>
+            <li>Custom package variants</li>
+            <li>Order support included</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$29.99</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="stats">
+          <div class="product-image">
+            <img src="products/custom-stats-package.jpg" alt="Custom Stats Package" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">S</div>
+          </div>
+          <div class="product-meta"><span>STATS</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Custom Stats Package</h3>
+          <p>Choose from available stat presets and progression packages for supported Call of Duty titles.</p>
+          <ul>
+            <li>Selectable stat tiers</li>
+            <li>Fast turnaround</li>
+            <li>Status updates</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$14.99</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="lobbies">
+          <div class="badge hot">FAST DELIVERY</div>
+          <div class="product-image">
+            <img src="products/bot-lobby-session.jpg" alt="Bot Lobby Session" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">L</div>
+          </div>
+          <div class="product-meta"><span>LOBBY</span><span class="stock"><i></i> AVAILABLE</span></div>
+          <h3>Bot Lobby Session</h3>
+          <p>Book a private supported-title lobby session with clear scheduling and package options.</p>
+          <ul>
+            <li>Session-based packages</li>
+            <li>Simple booking flow</li>
+            <li>Discord support</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$9.99</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="unlocks">
+          <div class="product-image">
+            <img src="products/unlock-package.jpg" alt="Unlock Package" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">U</div>
+          </div>
+          <div class="product-meta"><span>UNLOCKS</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Unlock Package</h3>
+          <p>A clean product slot for supported unlock packages, completion services, or cosmetic bundles.</p>
+          <ul>
+            <li>Multiple game choice</li>
+            <li>Package compariso</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$19.99</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="divinium">
+          <div class="product-image">
+            <img src="products\Liquid.png" alt="10,000 Liquid Divinium" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">DIV</div>
+          </div>
+          <div class="product-meta"><span>Divinium</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>10,000 Liquid Divinium</h3>
+          <p>Liquid Divinium for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$6.00</strong></div>
+            <a href="https://buy.stripe.com/00wcMX0Jh3UqgZP3U75AQ06" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+             <article class="product-card" data-category="bo3" data-subcategory="divinium">
+          <div class="product-image">
+            <img src="products\Liquid.png" alt="50,000 Liquid Divinium" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">DIV</div>
+          </div>
+          <div class="product-meta"><span>Divinium</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3> 50,000 Liquid Divinium</h3>
+          <p>Liquid Divinium for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$8.00</strong></div>
+            <a href="https://buy.stripe.com/6oUaEP2Rp2QmbFvcqD5AQ01" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+             <article class="product-card" data-category="bo3" data-subcategory="divinium">
+          <div class="product-image">
+            <img src="products\Liquid.png" alt="150,000 Liquid Divinium" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">DIV</div>
+          </div>
+          <div class="product-meta"><span>Divinium</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>150,000 Liquid Divinium</h3>
+          <p>Liquid Divinium for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$13.00</strong></div>
+            <a href="https://buy.stripe.com/5kQfZ9dw30Ie9xn1LZ5AQ05" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+             <article class="product-card" data-category="bo3" data-subcategory="divinium">
+          <div class="product-image">
+            <img src="products\Liquid.png" alt="500,000 Liquid Divinium" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">DIV</div>
+          </div>
+          <div class="product-meta"><span>Divinium</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>500,000 Liquid Divinium</h3>
+          <p>Liquid Divinium for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$18.00</strong></div>
+            <a href="https://buy.stripe.com/bJebITcrZ1MieRHbmz5AQ04" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+             <article class="product-card" data-category="bo3" data-subcategory="divinium">
+          <div class="product-image">
+            <img src="products\Liquid.png" alt="1,000,000 Liquid Divinium" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">DIV</div>
+          </div>
+          <div class="product-meta"><span>Divinium</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>1,000,000 Liquid Divinium</h3>
+          <p>Liquid Divinium for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Comes with a 1,000,000 Liquid Divinium Buyer Role in the discord server</li>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$28.00</strong></div>
+            <a href="https://buy.stripe.com/14A6oz2RpaiO4d39er5AQ03" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="crypto">
+          <div class="product-image">
+            <img src="products\keys.png" alt="5,000 Crypto Keys" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">KEYS</div>
+          </div>
+          <div class="product-meta"><span>Crypto Keys</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>5,000 Crypto Keys</h3>
+          <p>Crypto Keys for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$8.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="crypto">
+          <div class="product-image">
+            <img src="products\keys.png" alt="10,000 Crypto Keys" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">KEYS</div>
+          </div>
+          <div class="product-meta"><span>Crypto Keys</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>10,000 Crypto Keys</h3>
+          <p>Crypto Keys for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="crypto">
+          <div class="product-image">
+            <img src="products\keys.png" alt="20,000 Crypto Keys" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">KEYS</div>
+          </div>
+          <div class="product-meta"><span>Crypto Keys</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>20,000 Crypto Keys</h3>
+          <p>Crypto Keys for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$15.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+        
+        <article class="product-card" data-category="bo3" data-subcategory="crypto">
+          <div class="product-image">
+            <img src="products\keys.png" alt="50,000 Crypto Keys" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">KEYS</div>
+          </div>
+          <div class="product-meta"><span>Crypto Keys</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>50,000 Crypto Keys</h3>
+          <p>Crypto Keys for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$20.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="crypto">
+          <div class="product-image">
+            <img src="products\keys.png" alt="100,000 Crypto Keys" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">KEYS</div>
+          </div>
+          <div class="product-meta"><span>Crypto Keys</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>100,000 Crypto Keys</h3>
+          <p>Crypto Keys for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$25.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="packages">
+          <div class="product-image">
+            <img src="products/200-000-liquid-divinium-50-000-crypto-keys.jpg" alt="200,000 Liquid Divinium + 50,000 Crypto Keys" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>Package</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>200,000 Liquid Divinium + 50,000 Crypto Keys</h3>
+          <p>Liquid Divinium for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$28.00</strong></div>
+            <a href="https://buy.stripe.com/7sY4gr8bJ4YuaBr4Yb5AQ02" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="packages">
+          <div class="product-image">
+            <img src="products/zombies-package.jpg" alt="Zombies Package" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>Package</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Zombies Package</h3>
+          <p>Zombies content for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Max Prestige + Max Level | Max Level Weapons</li>
+            <li>All Zombie Camos | All Calling Cards Unlocked</li>
+            <li>All Easter Egg Completions (Spawn with RK5) | 100% Zombies Completion</li>
+            <li>Custom name color of your choice</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$15.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="packages">
+          <div class="product-image">
+            <img src="products/multiplayer-package.jpg" alt="Multiplayer Package" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>Package</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Multiplayer Package</h3>
+          <p>Multiplayer content for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Max Prestige + Max Level | Max Level Weapons</li>
+            <li>All Multiplayer Camos (Dark Matter) | All Calling Cards Unlocked</li>
+            <li>All Hero Gear | 100% Multiplayers Completion</li>
+            <li>500 BlackJack Tokens</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$15.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+        
+        <article class="product-card" data-category="bo3" data-subcategory="packages">
+          <div class="product-image">
+            <img src="products/combo-package.jpg" alt="Combo Package" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>Package</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Combo Package</h3>
+          <p>Multiplayer + Zombie content for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>MP/ZM Max Prestige + Max Level | MP/ZM Max Level Weapons</li>
+            <li>All MP/ZM Camos (Dark Matter + Red Hex) | All MP/ZM Calling Cards Unlocked</li>
+            <li>All Hero Gear | 500 BlackJack Tokens | Custom Zombies Name Color</li>
+            <li>100% MP/ZM Completion | All Easter Egg Completions (spawn with RK5)</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$25.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/zombies-level-1000.jpg" alt="Zombies Level 1000" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">ZM</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Zombies Level 1000</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/zombies-100-completion-camos-calling-cards.jpg" alt="Zombies 100% Completion / Camos / Calling Cards" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">ZM</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Zombies 100% Completion / Camos / Calling Cards</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/zombies-colored-name.jpg" alt="Zombies Colored Name" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">ZM</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Zombies Colored Name</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$5.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/zombies-colored-name-re-apply.jpg" alt="Zombies Colored Name [Re-apply]" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">ZM</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Zombies Colored Name [Re-apply] </h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <p>Re-apply service for existing colored names</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout + Screenshare service provided</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$3.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/easter-egg-completion-spawn-with-rk5.jpg" alt="Easter Egg Completion (Spawn with RK5)" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">ZM</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Easter Egg Completion (Spawn with RK5)</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/multiplayer-level-1000.jpg" alt="Multiplayer Level 1000" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Multiplayer Level 1000</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/multiplayer-100-completion-camos-calling-cards.jpg" alt="Multiplayer 100% Completion / Camos / Calling Cards" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Multiplayer 100% Completion / Camos / Calling Cards</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/all-hero-gear.jpg" alt="All Hero Gear" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>All Hero Gear</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/100x-blackjack-tokens.jpg" alt="100x BlackJack Tokens" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>100x BlackJack Tokens</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$5.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/255x-multiplayer-unlock-tokens.jpg" alt="255x Multiplayer Unlock Tokens" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>255x Multiplayer Unlock Tokens</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$5.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="single">
+          <div class="product-image">
+            <img src="products/platinum-trophy.jpg" alt="Platinum Trophy" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PSN</div>
+          </div>
+          <div class="product-meta"><span>Single Unlock</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Platinum Trophy</h3>
+          <p>Individual unlock for Call of Duty Black Ops 3</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$10.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+        
+        <article class="product-card" data-category="bo3" data-subcategory="spend">
+          <div class="product-image">
+            <img src="products/1-hour-of-auto-crypto-divinium-spending.jpg" alt="1 Hour Of Auto Crypto/Divinium Spending" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">AFK</div>
+          </div>
+          <div class="product-meta"><span>Spend Service</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>1 Hour Of Auto Crypto/Divinium Spending </h3>
+          <p>Automated spending for Crypto and Divinium</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+            <li>We Recommend using this service when you are going offline</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$15.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="spend">
+          <div class="product-image">
+            <img src="products/3-hour-of-auto-crypto-divinium-spending.jpg" alt="3 Hour Of Auto Crypto/Divinium Spending" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">AFK</div>
+          </div>
+          <div class="product-meta"><span>Spend Service</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>3 Hour Of Auto Crypto/Divinium Spending </h3>
+          <p>Automated spending for Crypto and Divinium</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+            <li>We Recommend using this service when you are going offline</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$35.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo3" data-subcategory="spend">
+          <div class="product-image">
+            <img src="products/5-hour-of-auto-crypto-divinium-spending.jpg" alt="5 Hour Of Auto Crypto/Divinium Spending" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">AFK</div>
+          </div>
+          <div class="product-meta"><span>Spend Service</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>5 Hour Of Auto Crypto/Divinium Spending </h3>
+          <p>Automated spending for Crypto and Divinium</p>
+          <ul>
+            <li>Currently working for PS4/PS5/PC</li>
+            <li>Support after checkout</li>
+            <li>We Recommend using this service when you are going offline</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$60.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="mp">
+          <div class="product-image">
+            <img src="products/level-1000.jpg" alt="Level 1000" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Unlocks & Levels</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Level 1000</h3>
+          <p>Max Level in Call of Duty Black Ops 4 Multiplayer</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$45.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="mp">
+          <div class="product-image">
+            <img src="products/unlock-all.jpg" alt="Unlock All" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Unlocks & Levels</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Unlock All</h3>
+          <p>Unlock all in Call of Duty Black Ops 4 Multiplayer</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$35.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+        
+        <article class="product-card" data-category="bo4" data-subcategory="mp">
+          <div class="product-image">
+            <img src="products/all-in-one-package.jpg" alt="All-In-One Package" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MP</div>
+          </div>
+          <div class="product-meta"><span>Unlocks & Levels</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>All-In-One Package</h3>
+          <p>Unlock all + Level 1000</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$50.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="crate">
+          <div class="product-image">
+            <img src="products/reserve-crates.jpg" alt="Reserve Crates" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">CASE</div>
+          </div>
+          <div class="product-meta"><span>Reserve Crates</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Reserve Crates</h3>
+          <p>5,000 Reserve Crates</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$35.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="crate">
+          <div class="product-image">
+            <img src="products/reserve-crates-2.jpg" alt="Reserve Crates" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">CASE</div>
+          </div>
+          <div class="product-meta"><span>Reserve Crates</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Reserve Crates</h3>
+          <p>10,000 Reserve Crates</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$60.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="clan">
+          <div class="product-image">
+            <img src="products/colored-clan-tag.jpg" alt="Colored Clan Tag" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">CLAN</div>
+          </div>
+          <div class="product-meta"><span>Clan Tag</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Colored Clan Tag</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$45.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="clan">
+          <div class="product-image">
+            <img src="products/colored-clan-tag-re-apply.jpg" alt="Colored Clan Tag [Re-Apply]" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">CLAN</div>
+          </div>
+          <div class="product-meta"><span>Clan Tag</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Colored Clan Tag [Re-Apply]</h3>
+          <p>Clan Tag Re-Apply Service at a discounted price.</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$20.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/league-classes-1-6-custom-modded-classes.jpg" alt="League Classes 1-6 Custom Modded Classes" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Custom Modded Classes</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>League Classes 1-6 Custom Modded Classes</h3>
+          <p>Modded League Classes for slots 1-6</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$55.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+        
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/classes-1-6-custom-modded-classes.jpg" alt="Classes 1-6 Custom Modded Classes" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Custom Modded Classes</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Classes 1-6 Custom Modded Classes</h3>
+          <p>Modded Multiplayer Classes for slots 1-6</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$55.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/custom-games-classes-1-6-custom-modded-classes.jpg" alt="Custom Games Classes 1-6 Custom Modded Classes" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Custom Modded Classes</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Custom Games Classes 1-6 Custom Modded Classes</h3>
+          <p>Modded Custom Game Classes for slots 1-6</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$55.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/league-classes-1-12-custom-modded-classes.jpg" alt="League Classes 1-12 Custom Modded Classes" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Custom Modded Classes</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>League Classes 1-12 Custom Modded Classes</h3>
+          <p>Modded League Classes for slots 1-12</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$75.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/classes-1-12-custom-modded-classes.jpg" alt="Classes 1-12 Custom Modded Classes" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Custom Modded Classes</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Classes 1-12 Custom Modded Classes</h3>
+          <p>Modded Multiplayer Classes for slots 1-12</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$75.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/custom-games-1-6-classes-modded-camos.jpg" alt="Custom Games 1-6 Classes - Modded Camos" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Modded Camos</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Custom Games 1-6 Classes - Modded Camos</h3>
+          <p>Modded Camos for Custom Games 1-6 Classes</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$15.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/league-1-12-classes-modded-camos.jpg" alt="League 1-12 Classes - Modded Camos" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Modded Camos</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>League 1-12 Classes - Modded Camos</h3>
+          <p>Modded Camos for League 1-12 Classes</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$26.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+        
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/multiplayer-1-12-classes-modded-camos.jpg" alt="Multiplayer 1-12 Classes - Modded Camos" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Modded Camos</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Multiplayer 1-12 Classes - Modded Camos</h3>
+          <p>Modded Camos for Multiplayer 1-12 Classes</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$26.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/multiplayer-1-12-classes-colored-class-name.jpg" alt="Multiplayer 1-12 Classes - Colored Class Name" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Colored Class Name</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Multiplayer 1-12 Classes - Colored Class Name</h3>
+          <p>Colored Class Name for Multiplayer 1-12 Classes</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$26.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/custom-games-1-6-classes-colored-class-name.jpg" alt="Custom Games 1-6 Classes - Colored Class Name" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Colored Class Name</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Custom Games 1-6 Classes - Colored Class Name</h3>
+          <p>Colored Class Name for Custom Games 1-6 Classes</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$15.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="classes">
+          <div class="product-image">
+            <img src="products/league-1-12-classes-colored-class-name.jpg" alt="League 1-12 Classes - Colored Class Name" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">MOD</div>
+          </div>
+          <div class="product-meta"><span>Colored Class Name</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>League 1-12 Classes - Colored Class Name</h3>
+          <p>Colored Class Name for League 1-12 Classes</p>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$26.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/barbarian-bundle-road-trip-reactive-camo-multiplayer-mp-events.jpg" alt="Barbarian Bundle + Road Trip Reactive Camo Multiplayer — MP Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Barbarian Bundle + Road Trip Reactive Camo Multiplayer — MP Events</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$45.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/winter-bundle-face-paints-multiplayer-mp-events.jpg" alt="Winter Bundle + Face Paints Multiplayer — MP Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Winter Bundle + Face Paints Multiplayer — MP Events</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$45.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/halloween-bundle-face-paints-multiplayer-mp-events.jpg" alt="Halloween Bundle + Face Paints Multiplayer — MP Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Halloween Bundle + Face Paints Multiplayer — MP Events</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$45.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+    <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/seasons-2-8-multiplayer-mp-events.jpg" alt="Seasons 2–8 Multiplayer — MP Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Seasons 2–8 Multiplayer — MP Events</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$45.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/shamrock-awe-bundle-multiplayer-mp-events.jpg" alt="Shamrock & Awe Bundle Multiplayer — MP Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Shamrock & Awe Bundle Multiplayer — MP Events</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$16.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/all-events-aio-multiplayer-mp-events.jpg" alt="All Events AIO Multiplayer — MP Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>All Events AIO Multiplayer — MP Events</h3>
+          <ul>
+            <li>Events All-In-One Includes: Shamrock & Awe, Seasons 2-8, Barbarian (Road Trip), Winter + Face Paints, Halloween + Face Paints
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$100.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+
+         <article class="product-card" data-category="bo4" data-subcategory="rare">
+          <div class="product-image">
+            <img src="products/special-face-paints-zombie-events.jpg" alt="Special Face Paints — Zombie Events" loading="lazy" onerror="this.closest('.product-image').classList.add('img-error')">
+            <div class="product-icon">PKG</div>
+          </div>
+          <div class="product-meta"><span>MP/ZM EVENT</span><span class="stock"><i></i> IN STOCK</span></div>
+          <h3>Special Face Paints — Zombie Events</h3>
+          <ul>
+            <li>Currently working for PS4/PS5</li>
+            <li>Support after checkout</li>
+          </ul>
+          <div class="product-bottom">
+            <div class="price"><small>FROM</small><strong>$35.00</strong></div>
+            <a href="#" class="buy-btn sellix-link">Buy Product <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="container advantages-grid">
+        <div class="advantage">
+          <span>01</span>
+          <div><strong>Quick Fulfillment</strong><p>We Keep buyers updated with our clear delivery expectations.</p></div>
+        </div>
+        <div class="advantage">
+          <span>02</span>
+          <div><strong>Trusted Support</strong><p>Open a ticket in the disord server for support & completion of your order. <a href="https://discord.gg/liquidlab">Click Here<span></span></a></p></div>
+        </div>
+        <div class="advantage">
+          <span>03</span>
+          <div><strong>Secure Checkout</strong><p>Checkout Via Sellix for a secure and seamless experience.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="reviews">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> CUSTOMER FEEDBACK</div>
+          <h2>Built around <em>trust</em></h2>
+        </div>
+        <div class="rating-box">
+          <strong>5.0</strong>
+          <div><span>★★★★★</span><small>Based on verified reviews via #feedback in discord</small></div>
+        </div>
+      </div>
+
+       <div class="review-grid">
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Very quick service, super available”</p>
+          <!-- Optional proof image: add this block to any review, remove it for reviews with no image -->
+          <div class="review-media">
+            <img src="reviews\very quick service, super available.png" alt="Screenshot shared by GadMax" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">GM</div><div><strong>GadMax</strong><small>Liquid Divinium $28</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Perfect service, communication was also great. definitely will be buying again”</p>
+          <!-- Optional proof image: add this block to any review, remove it for reviews with no image -->
+          <div class="review-media">
+            <img src="reviews\Perfect service, communication.jpg" alt="Screenshot shared by Ethan" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">E</div><div><strong>Ethan</strong><small>Liquid Divinium $13</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Very fast and i was able to watch them do it entirely.”</p>
+          <div class="review-media">
+            <img src="reviews\very fast and i was able.png" alt="Screenshot shared by scxrface21" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">S</div><div><strong>scxrface21</strong><small>Liquid Divinium $8</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Good service fast service and trustworthy”</p>
+          <div class="review-media">
+            <img src="reviews\good service fast service.png" alt="Screenshot shared by mexchill1870" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">M</div><div><strong>mexchill1870</strong><small>Crypto Keys $10</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“took like 5 minutes, and the guy is super chill”</p>
+          <div class="review-media">
+            <img src="reviews\took like 5 minutes.png" alt="Screenshot shared by jelqrr" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">J</div><div><strong>jelqrr</strong><small>Liquid Divinium $6</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“quick and easy”</p>
+          <div class="review-media">
+            <img src="reviews\quick and easy.png" alt="Screenshot shared by Hypno" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">H</div><div><strong>Hypno</strong><small>BO3 Zombie Package $15</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“I like the service of this staff”</p>
+          <div class="review-media">
+            <img src="reviews\i like the service of this staff.png" alt="Screenshot shared by liltrip" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">L</div><div><strong>liltrip</strong><small>BO3 Zombie Package $15</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“10 out of 10 service”</p>
+          <div class="review-media">
+            <img src="reviews\10 out of.png" alt="Screenshot shared by Certifi3d_Jay" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">C</div><div><strong>Certifi3d_Jay</strong><small>Liquid Divinium $6</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“I was skeptical really skeptical about this but I already sent my money but I got my service I wanted and it’s really good and fast”</p>
+          <div class="review-media">
+            <img src="reviews\skeptical.jpg" alt="Screenshot shared by mexchill1870" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">M</div><div><strong>mexchill1870</strong><small>Liquid Divinium $10</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Awsome cool service”</p>
+          <div class="review-media">
+            <img src="reviews\awsome cool.jpg" alt="Screenshot shared by MOMLOVER62" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">M</div><div><strong>MOMLOVER62</strong><small>BO3 Zombie Package $15</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Got 2 accounts done !!”</p>
+          <div class="review-media">
+            <img src="reviews\got 2 accounts done.png" alt="Screenshot shared by Certifi3d_Jay" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">C</div><div><strong>Certifi3d_Jay</strong><small>Liquid Divinium $16</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="review-top"><span>★★★★★</span><small>Verified Buyer</small></div>
+          <p>“Because it's good service”</p>
+          <div class="review-media">
+            <img src="reviews\Because it’s good service.jpg" alt="Screenshot shared by liltrip" loading="lazy">
+          </div>
+          <div class="review-user"><div class="avatar">L</div><div><strong>liltrip</strong><small>1 Million Liquid Divinium $28</small></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="faq">
+      <div class="faq-wrap">
+        <div class="faq-intro">
+          <div class="eyebrow"><span></span> FAQ</div>
+          <h2>Questions before<br><em>checkout?</em></h2>
+          <p>LiquidLab FAQ</p>
+          <a href="https://discord.gg/liquidlab" target="_blank" rel="noreferrer" class="secondary-btn">Contact Support</a>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary>How does ordering work?<span>+</span></summary>
+            <p>Choose a product, review the requirements, then use the linked Sellix checkout. After payment, follow the delivery instructions shown on the product page.</p>
+          </details>
+          <details>
+            <summary>Which Call of Duty games are supported?<span>+</span></summary>
+            <p>Replace this text with the exact titles and platforms your store currently supports.</p>
+          </details>
+          <details>
+            <summary>How long does delivery take?<span>+</span></summary>
+            <p>Set realistic delivery times for each service. Use instant-delivery wording only for products that are actually automated.</p>
+          </details>
+          <details>
+            <summary>Where can I get support?<span>+</span></summary>
+            <p>Add your Discord invite, email, or ticket link here so buyers always have a clear support path.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta container">
+      <div>
+        <span class="mini-label">READY TO ORDER?</span>
+        <h2>Find the package that fits.</h2>
+      </div>
+      <a href="#services" class="primary-btn">Browse Services
+        <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="https://discord.gg/liquidlab" target="_blank" rel="noreferrer">
+          <img src="logo.png" alt="LiquidLab Logo" class="brand-mark-img">
+          <span>LiquidLab<span class="brand-dot">.</span></span>
+        </a>
+        <p>Independent digital-services. Not affiliated with Activision, Call of Duty, or their respective trademark owners.</p>
+      </div>
+      <div class="footer-links">
+        <div><strong>STORE</strong><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></div>
+        <div><strong>SUPPORT</strong><a href="https://discord.gg/liquidlab" target="_blank" rel="noreferrer">Discord</a><a href="https://liquidlab.io/terms" target="_blank" rel="noreferrer">Terms</a><a href="https://liquidlab.io/refund-policy" target="_blank" rel="noreferrer">Refund Policy</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Liquid Lab. All rights reserved.</span>
+      <span>est 2026</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="reviewLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <div class="search-box">
+      <div class="search-head">
+        <strong>Search services</strong>
+        <button id="closeSearch">×</button>
+      </div>
+      <input id="searchInput" type="text" placeholder="Try “account”, “stats”, “lobby”..." />
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+LIQUID LAB — COMPLETE HALLOWEEN TEST WEBSITE
+October 8, 2026
+
+1. Extract this ZIP.
+2. Open the LiquidLab-Halloween-Full-Site folder. Upload EVERYTHING INSIDE
+   that folder into the ROOT of your NEW test GitHub repository.
+   index.html must be at the top level, not inside another folder.
+   Keep assets, products, reviews and vendor as folders.
+3. In that repo: Settings > Pages > Deploy from a branch > main > /(root).
+   Save, then open the Pages link when GitHub finishes publishing.
+
+Do not upload the ZIP itself as the website. No npm commands or build needed.
+No Supabase commands or bot/VPS changes are needed for this design test.
+
+WHAT YOU CAN TEST
+- Castle and moon homepage, purple/orange cards, all 24 product groups.
+- BO7, BO6, BO2, BO3, BO4, Cold War, PSN and account tabs/subcategories.
+- View Options, every package selector, displayed prices and ticket links.
+- Cart items, quantities, totals, and the checkout preview dialog.
+- Search, FAQ, separate reviews page, review filters and screenshot viewer.
+- Phone/tablet layout, navigation menu, and the included secondary pages.
+
+HOW TEST MODE WORKS
+On the new repo's domain, a DESIGN PREVIEW strip appears automatically.
+Buy Product and cart checkout show your selection in a preview dialog.
+This mode does not charge customers, create Stripe sessions, link Discord,
+or submit admin login emails/forms. Discord ticket links still open Discord.
+Instant account stock is labelled STOCK ON LIVE STORE, without invented stock.
+Public product controls and reviews use your existing Supabase connection;
+if the review feed is unreachable, the included real featured reviews display.
+
+The complete admin/order/account delivery files are included, but backend
+actions are not part of this visual test. Existing Edge Functions and auth
+redirects are configured for your live domain. Preview checkout does not test
+Stripe webhooks, account-delivery emails, or Supabase writes.
+
+On liquidlab.shop or www.liquidlab.shop, preview mode automatically turns off
+and the existing payment/auth/stock integrations run normally. The Halloween
+theme itself requires no database changes. Instant delivery still depends
+on completing its previously supplied backend/email setup.
+
+WHAT IS INCLUDED
+Every HTML page, stylesheet, script, current product image, review asset,
+four new Halloween images, local fonts, the Supabase browser SDK, and licenses.
+FILE-MANIFEST.txt lists every shipped site file.
+The separate PREVIEWS folder in the ZIP is for viewing; don't upload it.
+
+GitHub's web uploader may require separate batches. If that happens, upload
+the top-level files first, then the four folders: assets, products, reviews,
+and vendor. Keep their names exactly as supplied.
+
+THIRD-PARTY FILES AND ARTWORK
+vendor/supabase.js: Supabase JS 2.117.3, retrieved from the official package
+distribution at https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js.
+License: vendor/SUPABASE-LICENSE.txt.
+vendor/fonts.css and vendor/fonts/: Inter and Space Grotesk, obtained from
+Google Fonts. Their SIL Open Font License files are included in vendor/fonts.
+
+The built-in image-generation tool created these project assets:
+assets/halloween/castle.png — reference-inspired purple haunted castle,
+violet full moon, fog, bats, cobwebs and glowing orange pumpkin; open dark
+space at left, cinematic wide landscape, no typography or interface.
+assets/halloween/divinium.png — three purple glowing glass divinium vials
+with aged brass bases in a gothic laboratory, orange doorway light and mist.
+assets/halloween/keys.png — ornate brass keys with amethyst gems on a dark
+gothic laboratory table, violet mist and warm orange furnace light.
+assets/halloween/account.png — undead tactical soldier with glowing orange
+eyes in a gothic corridor, purple smoke, silhouettes and orange Roman III.
+All four prompts requested premium photorealistic video-game cinematic art,
+black/royal-purple palette with orange accents, full-bleed art, no watermark.
+
+Validation: all product groups retained; all local page/image/font references
+resolve. Desktop and mobile browser checks covered filters, prices, search,
+cart quantities/totals, preview checkout, reviews and anonymous admin hiding.
+External backend requests were blocked or simulated during verification.

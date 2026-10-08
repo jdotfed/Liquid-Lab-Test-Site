@@ -2,10 +2,28 @@ const filterButtons = document.querySelectorAll('.filter');
 const products = [...document.querySelectorAll('.product-card')];
 const subfiltersBar = document.getElementById('subfilters');
 
+// Paused services stay visible, but every checkout path is disabled.
+document.querySelectorAll('.product-card[data-paused="true"]').forEach(card => {
+  card.querySelectorAll('select').forEach(select => {
+    select.disabled = true;
+    select.setAttribute('aria-disabled', 'true');
+  });
+  card.querySelectorAll('.buy-btn').forEach(button => {
+    button.removeAttribute('href');
+    button.setAttribute('aria-disabled', 'true');
+    button.setAttribute('tabindex', '-1');
+    button.textContent = 'Temporarily Unavailable';
+  });
+});
+
 // Add an entry here for any main filter (data-filter value) that should
 // show a row of subcategory chips. "key" must match the data-subcategory
 // attribute on the matching .product-card elements.
 const subcategoryMap = {
+  bo2: [
+    { key: 'multiplayer', label: 'Multiplayer' },
+    { key: 'zombies', label: 'Zombies' }
+  ],
   bo3: [
     { key: 'divinium', label: 'Divinium' },
     { key: 'crypto', label: 'Crypto Keys' },
@@ -17,9 +35,7 @@ const subcategoryMap = {
     { key: 'mp', label: 'Multiplayer' },
     { key: 'crate', label: 'Reserve Crates' },
     { key: 'clan', label: 'Clan Tag' },
-    { key: 'classes', label: 'Modded Classes' },
-    { key: 'rare', label: 'Rare Items' },
-    { key: 'blackout', label: 'Blackout' }
+    { key: 'rare', label: 'Rare Items' }
   ]
   
   // Example for adding subcategories to BO4:
@@ -60,7 +76,8 @@ function renderSubfilters(mainFilter){
 
 function applyFilters(){
   products.forEach(card => {
-    const matchesMain = activeMain === 'all' || card.dataset.category === activeMain;
+    const game = activeMain.startsWith('bots:') ? activeMain.split(':')[1] : null;
+    const matchesMain = activeMain === 'all' || (game ? card.dataset.productId.startsWith(game + '-') : card.dataset.category === activeMain || (card.dataset.extraCategories || '').split(' ').includes(activeMain));
     const matchesSub = activeSub === 'all' || card.dataset.subcategory === activeSub;
     card.classList.toggle('hidden', !(matchesMain && matchesSub));
   });
@@ -110,7 +127,7 @@ searchInput.addEventListener('input', () => {
   searchResults.innerHTML = '';
   if(!q) return;
 
-  const matched = products.filter(card => card.innerText.toLowerCase().includes(q));
+  const matched = products.filter(card => card.textContent.toLowerCase().includes(q));
   if(!matched.length){
     searchResults.innerHTML = '<div class="search-result">No matching services found.</div>';
     return;
@@ -119,12 +136,15 @@ searchInput.addEventListener('input', () => {
   matched.forEach(card => {
     const title = card.querySelector('h3').textContent;
     const category = card.dataset.category;
-    const result = document.createElement('div');
+    const result = document.createElement('button');
+    result.type = 'button';
     result.className = 'search-result';
     result.innerHTML = `<strong>${title}</strong> — ${category}`;
     result.addEventListener('click', () => {
       closeModal();
-      document.getElementById('services').scrollIntoView({behavior:'smooth'});
+      document.querySelector('.filter[data-filter="all"]').click();
+      card.querySelector('.ll-product-options').open = true;
+      card.scrollIntoView({behavior:'smooth', block:'center'});
     });
     searchResults.appendChild(result);
   });

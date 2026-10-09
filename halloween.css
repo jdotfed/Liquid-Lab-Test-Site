@@ -1,6 +1,13 @@
 /* Original Liquid Lab layout, lightly dressed for Halloween. */
 .ll-seasonal{--ll-amber:#e99150}
 .ll-seasonal-store .hero{position:relative}
+.ll-castle-backdrop{position:relative;isolation:isolate;background:#080808}
+.ll-castle-backdrop:before{content:'';position:absolute;inset:0;z-index:0;background:url('assets/halloween/castle.png') center -65px/cover no-repeat;opacity:.85;pointer-events:none}
+.ll-castle-backdrop:after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#0808081f 0%,#0808081a 32%,#0808089e 68%,#080808 98%),linear-gradient(90deg,#080808c4 0%,#0808088c 37%,#08080833 70%,#08080826 100%);pointer-events:none}
+.ll-castle-backdrop>.hero{z-index:1}
+.ll-castle-backdrop .hero-copy>p{color:#b8b8c0}
+.ll-castle-backdrop .hero h1,.ll-castle-backdrop .hero-copy>p,.ll-castle-backdrop .eyebrow{text-shadow:0 2px 15px #0008}
+.ll-castle-backdrop .ll-hero-bats{display:none}
 .ll-season-corners{pointer-events:none;position:fixed;inset:0 0 auto;z-index:20;height:0}
 .ll-corner-web{position:absolute;top:0;width:128px;height:128px;opacity:.5;pointer-events:none}
 .ll-web-left{left:0}
@@ -31,6 +38,7 @@
 html[data-ll-preview="true"] .ll-seasonal-store .site-announcement{display:none}
 @media(max-width:1250px){.ll-corner-web{width:88px;height:88px;opacity:.42}.ll-season-spider{right:8px;top:38px;width:15px;height:67px}.ll-hero-pumpkin{right:-15px;width:80px;height:80px}}
 @media(max-width:900px){.ll-hero-bats{top:8px;right:75px}.ll-hero-pumpkin{right:5px;bottom:28px}}
+@media(max-width:1100px){.ll-castle-backdrop:before{height:min(100%,720px);background-position:70% top}.ll-castle-backdrop:after{background:linear-gradient(180deg,#080808aa 0%,#080808b3 28%,#080808 720px)}}
 @media(max-width:620px){.ll-corner-web{width:43px;height:43px;opacity:.3}.ll-season-spider{display:none}.ll-seasonal-store .ll-hud-web{width:40px;height:40px;opacity:.3}.ll-hero-pumpkin{width:61px;height:61px;right:-1px;bottom:-16px}.ll-hero-bats{top:-12px;right:30px;width:71px;height:35px}.ll-hero-bats img{width:28px;height:12px}.ll-hero-bats img:last-child{width:22px;height:10px}.ll-seasonal-store .hero-visual{margin-bottom:16px}.ll-seasonal-store .product-card:not([data-paused="true"]):before{width:21px;height:21px}}
 @media(prefers-reduced-motion:reduce){.ll-seasonal *, .ll-seasonal *:before,.ll-seasonal *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 

@@ -4,6 +4,7 @@
   const isPreview=!productionHosts.has(location.hostname);
   window.LIQUID_LAB_SITE_MODE=Object.freeze({isPreview});
   if(!isPreview)return;
+  document.documentElement.dataset.llPreview='true';
   document.addEventListener('DOMContentLoaded',()=>{
     const bar=document.createElement('aside');bar.className='ll-preview-bar';
     bar.innerHTML='<span>DESIGN PREVIEW</span><p>Try the options and cart. Checkout opens a preview.</p>';

@@ -13,29 +13,30 @@
 .ll-hero-bats img{position:absolute;width:41px;height:18px;object-fit:contain;transform:rotate(-13deg)}
 .ll-hero-bats img:first-child{left:0;top:0}
 .ll-hero-bats img:last-child{right:0;bottom:4px;width:29px;height:14px;transform:rotate(9deg)}
-.ll-seasonal-store .main-hud{box-shadow:0 24px 90px #7a00ff60,0 0 40px #7a00ff60}
-.ll-seasonal-store .main-hud:after{content:'';position:absolute;z-index:6;inset:0;border-left:1px solid #ed9545b0;border-bottom:1px solid #ed9545b0;border-radius:9px;pointer-events:none}
+.ll-seasonal-store .main-hud{border:2px solid transparent;background:linear-gradient(145deg,#18181a,#0a0a0b) padding-box,conic-gradient(from 45deg,#7a00ff 0deg 95deg,#f59a50 150deg 230deg,#7a00ff 290deg 360deg) border-box;box-shadow:0 24px 75px #7a00ff75,0 0 34px #7a00ff60,0 15px 25px #f07a2126}
 .ll-seasonal-store .ll-hud-web{position:absolute;top:0;left:0;z-index:4;width:67px;height:67px;opacity:.38;pointer-events:none}
-.ll-seasonal-store .primary-btn{border:1px solid #e99150;background:var(--red);box-shadow:0 10px 30px #7b00ff66,0 0 12px #f28d3b24}
+.ll-seasonal-store .primary-btn{border:2px solid #ffad5b;background:var(--red);box-shadow:0 10px 30px #7b00ff66,0 0 15px #f28d3b70}
 .ll-seasonal-store .primary-btn:hover{border-color:#ffb46e;box-shadow:0 10px 30px #7b00ff77,0 0 16px #f28d3b38}
 .ll-seasonal-store .trust-row{position:relative}
-.ll-seasonal-store .trust-row:after{content:'';position:absolute;right:20%;top:-2px;width:3px;height:3px;border-radius:1px;transform:rotate(45deg);background:#ffaa62;box-shadow:0 0 8px #f58a36}
+.ll-seasonal-store .trust-row:after{content:'';position:absolute;right:40%;top:-3px;width:4px;height:4px;border-radius:1px;transform:rotate(45deg);background:#ffb36a;box-shadow:0 0 10px 2px #f58a3680}
+.ll-seasonal-store .trust-row:before{content:'';position:absolute;right:0;top:-3px;width:4px;height:4px;transform:rotate(45deg);background:#ffb36a;box-shadow:0 0 10px 2px #f58a3680}
 .ll-seasonal-store .ticker-track span:nth-child(8n+1) i{color:#e58a44;text-shadow:0 0 7px #e58a4445}
-.ll-seasonal-store .product-card:not([data-paused="true"]):before{content:'';position:absolute;z-index:4;top:0;left:0;width:29px;height:29px;border-top:1px solid #ec9657;border-left:1px solid #ec9657;border-top-left-radius:9px;pointer-events:none}
+.ll-seasonal-store .product-card:not([data-paused="true"]):before{content:'';position:absolute;z-index:4;top:0;left:0;width:29px;height:29px;border-top:2px solid #ffa65d;border-left:2px solid #ffa65d;border-top-left-radius:9px;filter:drop-shadow(0 0 4px #f28d3b80);pointer-events:none}
 .ll-seasonal-store .product-card:hover{border-color:#a058e4}
 .ll-seasonal-store .discord-link-panel{position:relative}
 .ll-seasonal-store .discord-link-panel:before{content:'';position:absolute;top:0;right:0;width:32px;height:27px;border-top:1px solid #e9915099;border-right:1px solid #e9915099;border-top-right-radius:13px;pointer-events:none}
 .ll-seasonal-store .ll-footer:before{background:linear-gradient(90deg,transparent,#a351d917,#e68d441c,transparent)}
 .ll-seasonal a:focus-visible,.ll-seasonal button:focus-visible,.ll-seasonal select:focus-visible{outline:2px solid #b875f1;outline-offset:4px}
+/* The design preview stays labelled without moving the original layout. */
+html[data-ll-preview="true"] .ll-seasonal-store .site-announcement{display:none}
 @media(max-width:1250px){.ll-corner-web{width:88px;height:88px;opacity:.42}.ll-season-spider{right:8px;top:38px;width:15px;height:67px}.ll-hero-pumpkin{right:-15px;width:80px;height:80px}}
 @media(max-width:900px){.ll-hero-bats{top:8px;right:75px}.ll-hero-pumpkin{right:5px;bottom:28px}}
 @media(max-width:620px){.ll-corner-web{width:43px;height:43px;opacity:.3}.ll-season-spider{display:none}.ll-seasonal-store .ll-hud-web{width:40px;height:40px;opacity:.3}.ll-hero-pumpkin{width:61px;height:61px;right:-1px;bottom:-16px}.ll-hero-bats{top:-12px;right:30px;width:71px;height:35px}.ll-hero-bats img{width:28px;height:12px}.ll-hero-bats img:last-child{width:22px;height:10px}.ll-seasonal-store .hero-visual{margin-bottom:16px}.ll-seasonal-store .product-card:not([data-paused="true"]):before{width:21px;height:21px}}
 @media(prefers-reduced-motion:reduce){.ll-seasonal *, .ll-seasonal *:before,.ll-seasonal *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-/* Existing test-repository checkout preview. */
-.ll-preview-bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:9px 18px;background:#19101f;border-bottom:1px solid #5d396f;color:#c6b3d6;font:11px/1.5 Inter,system-ui,sans-serif}
+.ll-preview-bar{position:fixed;bottom:18px;left:18px;z-index:18;display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 11px;background:#19101fe8;border:1px solid #5d396f;border-radius:7px;color:#c6b3d6;font:11px/1.5 Inter,system-ui,sans-serif;pointer-events:none}
 .ll-preview-bar>span{font-size:9px;font-weight:800;letter-spacing:.08em;color:#e3befd;white-space:nowrap}
-.ll-preview-bar p{margin:0}
+.ll-preview-bar p{display:none;margin:0}
 .ll-preview-dialog{width:min(520px,calc(100% - 32px));padding:0;border:1px solid #a171c4;border-radius:15px;background:linear-gradient(140deg,#23152e,#101117);color:#f8efff;box-shadow:0 30px 100px #000b}
 .ll-preview-dialog::backdrop{background:#050309ce;backdrop-filter:blur(5px)}
 .ll-preview-dialog-head{padding:20px 24px;border-bottom:1px solid #51345f;display:flex;align-items:center;justify-content:space-between;gap:15px;font:600 13px Inter,system-ui,sans-serif}

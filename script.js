@@ -76,8 +76,7 @@ function renderSubfilters(mainFilter){
 
 function applyFilters(){
   products.forEach(card => {
-    const game = activeMain.startsWith('bots:') ? activeMain.split(':')[1] : null;
-    const matchesMain = activeMain === 'all' || (game ? card.dataset.productId.startsWith(game + '-') : card.dataset.category === activeMain || (card.dataset.extraCategories || '').split(' ').includes(activeMain));
+    const matchesMain = activeMain === 'all' || card.dataset.category === activeMain;
     const matchesSub = activeSub === 'all' || card.dataset.subcategory === activeSub;
     card.classList.toggle('hidden', !(matchesMain && matchesSub));
   });
@@ -127,7 +126,7 @@ searchInput.addEventListener('input', () => {
   searchResults.innerHTML = '';
   if(!q) return;
 
-  const matched = products.filter(card => card.textContent.toLowerCase().includes(q));
+  const matched = products.filter(card => card.innerText.toLowerCase().includes(q));
   if(!matched.length){
     searchResults.innerHTML = '<div class="search-result">No matching services found.</div>';
     return;
@@ -136,15 +135,12 @@ searchInput.addEventListener('input', () => {
   matched.forEach(card => {
     const title = card.querySelector('h3').textContent;
     const category = card.dataset.category;
-    const result = document.createElement('button');
-    result.type = 'button';
+    const result = document.createElement('div');
     result.className = 'search-result';
     result.innerHTML = `<strong>${title}</strong> — ${category}`;
     result.addEventListener('click', () => {
       closeModal();
-      document.querySelector('.filter[data-filter="all"]').click();
-      card.querySelector('.ll-product-options').open = true;
-      card.scrollIntoView({behavior:'smooth', block:'center'});
+      document.getElementById('services').scrollIntoView({behavior:'smooth'});
     });
     searchResults.appendChild(result);
   });
